@@ -13,7 +13,7 @@ const LeftNavCollapseWrapper = styled.div`
     color: white;
     left: ${(props) => (props.show === true ? '0px' : '-30vw')};
     @media (max-width: 420px) {
-        padding: 0px;
+        display: none;
     }
     /* width */
     @media (min-width: 420px) {
