@@ -33,8 +33,8 @@ const VideoWrapper = styled.div`
 
 const VideoImage = styled.img`
     width: 100%;
-    max-height: 200px;
-    object-fit: none;
+    max-height: 160px;
+    object-fit: cover;
     object-position: 50% 50%;
 `;
 
