@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import styled from '@emotion/styled';
 import './App.css';
+import VideosContainer from './components/VideosContainer';
+import LeftNav from './components/LeftNav';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
+const Container = styled.div`
+    display: flex;
+    height: 92%;
+    overflow: hidden;
+`;
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+            <Container>
+                <LeftNav />
+                <VideosContainer />
+            </Container>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
