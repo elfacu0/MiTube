@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/MyTube/static/css/main.f7c0852f.chunk.css",
-    "main.js": "/MyTube/static/js/main.2e010ddd.chunk.js",
-    "main.js.map": "/MyTube/static/js/main.2e010ddd.chunk.js.map",
+    "main.js": "/MyTube/static/js/main.e76336a7.chunk.js",
+    "main.js.map": "/MyTube/static/js/main.e76336a7.chunk.js.map",
     "runtime-main.js": "/MyTube/static/js/runtime-main.4ef3af60.js",
     "runtime-main.js.map": "/MyTube/static/js/runtime-main.4ef3af60.js.map",
-    "static/js/2.8d942843.chunk.js": "/MyTube/static/js/2.8d942843.chunk.js",
-    "static/js/2.8d942843.chunk.js.map": "/MyTube/static/js/2.8d942843.chunk.js.map",
+    "static/js/2.fc1dc20d.chunk.js": "/MyTube/static/js/2.fc1dc20d.chunk.js",
+    "static/js/2.fc1dc20d.chunk.js.map": "/MyTube/static/js/2.fc1dc20d.chunk.js.map",
     "index.html": "/MyTube/index.html",
-    "precache-manifest.2fca163bc27e49faba6c97d837948736.js": "/MyTube/precache-manifest.2fca163bc27e49faba6c97d837948736.js",
+    "precache-manifest.47e2a436930bbb830da02aa26041ffb0.js": "/MyTube/precache-manifest.47e2a436930bbb830da02aa26041ffb0.js",
     "service-worker.js": "/MyTube/service-worker.js",
     "static/css/main.f7c0852f.chunk.css.map": "/MyTube/static/css/main.f7c0852f.chunk.css.map",
-    "static/js/2.8d942843.chunk.js.LICENSE.txt": "/MyTube/static/js/2.8d942843.chunk.js.LICENSE.txt"
+    "static/js/2.fc1dc20d.chunk.js.LICENSE.txt": "/MyTube/static/js/2.fc1dc20d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4ef3af60.js",
-    "static/js/2.8d942843.chunk.js",
+    "static/js/2.fc1dc20d.chunk.js",
     "static/css/main.f7c0852f.chunk.css",
-    "static/js/main.2e010ddd.chunk.js"
+    "static/js/main.e76336a7.chunk.js"
   ]
 }
