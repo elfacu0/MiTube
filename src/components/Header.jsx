@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import LeftNavCollapse from './LeftNavCollapse';
 
 const SmallHeader = styled.div`
     position: fixed;
+    z-index: 1;
     width: 100%;
     max-height: 56px;
     height: 8%;
@@ -124,12 +126,17 @@ const SignInText = styled.p`
 `;
 
 const Header = () => {
+    const [showCollapse, setShowCollapse] = useState(false);
     return (
         <React.Fragment>
+            <LeftNavCollapse show={showCollapse} />
             <HeaderWrapper>
                 <HeaderIcon
                     src="https://image.flaticon.com/icons/svg/36/36775.svg"
                     alt="more-icon"
+                    onClick={() => {
+                        setShowCollapse(!showCollapse);
+                    }}
                 ></HeaderIcon>
                 <YoutubeLogo
                     src="https://logos-marcas.com/wp-content/uploads/2020/04/YouTube-Logo.png"

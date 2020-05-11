@@ -8,6 +8,9 @@ const Icon = styled.img`
     padding: 12px;
     cursor: pointer;
     visibility: hidden;
+    @media (max-width: 420px) {
+        visibility: visible;
+    }
 `;
 
 const VideoWrapper = styled.div`
@@ -21,7 +24,7 @@ const VideoWrapper = styled.div`
     padding-bottom: 50px;
     @media (max-width: 420px) {
         margin-right: 0px;
-        margin-top: 40px;
+        margin-top: 25px;
         max-width: 420px;
         padding-bottom: 0px;
     }
