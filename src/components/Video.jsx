@@ -13,6 +13,14 @@ const Icon = styled.img`
     }
 `;
 
+const IconsInImage = styled.div`
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+`;
+
 const VideoWrapper = styled.div`
     display: flex;
     flex: 1;
@@ -21,7 +29,7 @@ const VideoWrapper = styled.div`
     min-width: 255px;
     min-height: 150px;
     margin-right: 20px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     @media (max-width: 420px) {
         margin-right: 0px;
         margin-top: 25px;
@@ -30,6 +38,9 @@ const VideoWrapper = styled.div`
     }
     &:hover ${Icon} {
         visibility: visible;
+    }
+    &:hover ${IconsInImage} {
+        display: flex;
     }
     cursor: pointer;
 `;
@@ -76,8 +87,8 @@ const VideoTitle = styled.div`
     font-weight: 500;
     width: 95%;
     font-size: 1em;
-    overflow: hidden;
     display: -webkit-box;
+    overflow: hidden;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 `;
@@ -115,6 +126,20 @@ const VideoDurationText = styled.p`
     font-weight: 600;
     font-size: 0.82em;
 `;
+
+const IconImageWrapper = styled.div`
+    padding: 6px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-bottom: 5px;
+`;
+
+const IconImage = styled.img`
+    width: 20px;
+    height: 20px;
+    filter: invert(0.9);
+`;
+
 const Video = (props) => {
     const {
         image_url,
@@ -128,6 +153,20 @@ const Video = (props) => {
     return (
         <VideoWrapper>
             <VideoImageContianer>
+                <IconsInImage>
+                    <IconImageWrapper>
+                        <IconImage
+                            alt="clock-icon"
+                            src="https://image.flaticon.com/icons/svg/1827/1827379.svg"
+                        />
+                    </IconImageWrapper>
+                    <IconImageWrapper>
+                        <IconImage
+                            alt="queue-icon"
+                            src="https://www.flaticon.com/premium-icon/icons/svg/2740/2740670.svg"
+                        />
+                    </IconImageWrapper>
+                </IconsInImage>
                 <VideoImage src={image_url} alt={image_url} />
                 <VideoDurationWrapper>
                     <VideoDurationText>{videoDuration}</VideoDurationText>
