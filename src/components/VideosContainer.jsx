@@ -34,6 +34,7 @@ const VideosWrapper = styled.div`
     justify-content: space-around;
     @media (max-width: 420px) {
         padding: 0px;
+        margin-top: 30px;
     }
     /* width */
     @media (min-width: 420px) {

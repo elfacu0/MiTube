@@ -125,11 +125,26 @@ const SignInText = styled.p`
     margin: 0px;
 `;
 
+const ScreenBlur = styled.div`
+    position: absolute;
+    display: ${(props) => (props.show === true ? 'block' : 'none')};
+    z-index: 1;
+    backdrop-filter: grayscale(60%);
+    width: 100vw;
+    height: 100vh;
+`;
+
 const Header = () => {
     const [showCollapse, setShowCollapse] = useState(false);
     return (
         <React.Fragment>
             <LeftNavCollapse show={showCollapse} />
+            <ScreenBlur
+                show={showCollapse}
+                onClick={() => {
+                    setShowCollapse(false);
+                }}
+            />
             <HeaderWrapper>
                 <HeaderIcon
                     src="https://image.flaticon.com/icons/svg/36/36775.svg"

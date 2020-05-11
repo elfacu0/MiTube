@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 
 const LeftNavCollapseWrapper = styled.div`
     z-index: 2;
-    width: 240px;
+    width: 250px;
     top: 56px;
-    height: 90vh;
+    height: calc(100vh - 56px);
     position: absolute;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     overflow-y: scroll;
     background-color: #212121;
     color: white;
