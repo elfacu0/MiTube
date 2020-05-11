@@ -15,7 +15,7 @@ const VideoWrapper = styled.div`
     flex: 1;
     flex-direction: column;
     max-width: 320px;
-    min-width: 240px;
+    min-width: 255px;
     min-height: 150px;
     margin-right: 20px;
     padding-bottom: 50px;
@@ -33,7 +33,7 @@ const VideoWrapper = styled.div`
 
 const VideoImage = styled.img`
     width: 100%;
-    max-height: 160px;
+    max-height: 165px;
     object-fit: cover;
     object-position: 50% 50%;
 `;
@@ -51,8 +51,8 @@ const DetailsContainer = styled.div`
 `;
 
 const ProfileImage = styled.img`
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     max-height: 36px;
     max-width: 36px;
     width: 15%;
@@ -91,6 +91,27 @@ const VideoInfo = styled.div`
     font-size: 0.9em;
     filter: brightness(70%);
 `;
+
+const VideoImageContianer = styled.div`
+    position: relative;
+`;
+
+const VideoDurationWrapper = styled.div`
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+`;
+
+const VideoDurationText = styled.p`
+    color: white;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 0.82em;
+`;
 const Video = (props) => {
     const {
         image_url,
@@ -99,10 +120,16 @@ const Video = (props) => {
         channelName,
         videoViews,
         videoAge,
+        videoDuration,
     } = props;
     return (
         <VideoWrapper>
-            <VideoImage src={image_url} alt={image_url} />
+            <VideoImageContianer>
+                <VideoImage src={image_url} alt={image_url} />
+                <VideoDurationWrapper>
+                    <VideoDurationText>{videoDuration}</VideoDurationText>
+                </VideoDurationWrapper>
+            </VideoImageContianer>
             <DetailsContainer>
                 <ProfileImage src={profile_url} alt={profile_url} />
                 <VideoDetails>

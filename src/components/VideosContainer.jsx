@@ -7,6 +7,7 @@ import {
     getChannelName,
     getVideoViews,
     getVideoAge,
+    getVideoDuration,
 } from '../data/titles';
 
 const Recommended = styled.p`
@@ -26,7 +27,7 @@ const Recommended = styled.p`
 const VideosWrapper = styled.div`
     display: flex;
     width: 100%;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 10px 0px 30px;
     overflow-y: scroll;
     flex-wrap: wrap;
     flex-direction: row;
@@ -67,6 +68,7 @@ for (let i = 0; i < 120; i++) {
             channelName={getChannelName()}
             videoAge={getVideoAge()}
             videoViews={getVideoViews()}
+            videoDuration={getVideoDuration()}
         />
     );
 }

@@ -156,4 +156,12 @@ export function getVideoAge() {
     return videoAge;
 }
 
+export function getVideoDuration() {
+    let minutes = randomNumber(20);
+    let seconds = randomNumber(60);
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    const videoDuration = `${minutes}:${seconds}`;
+    return videoDuration;
+}
+
 export default titles;
