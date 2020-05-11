@@ -1,5 +1,14 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
+
+const Icon = styled.img`
+    filter: invert(1.1);
+    width: 20px;
+    height: 20px;
+    padding: 12px;
+    cursor: pointer;
+    visibility: hidden;
+`;
 
 const VideoWrapper = styled.div`
     display: flex;
@@ -13,12 +22,20 @@ const VideoWrapper = styled.div`
     @media (max-width: 420px) {
         margin-right: 0px;
         margin-top: 40px;
+        max-width: 420px;
+        padding-bottom: 0px;
+    }
+    &:hover ${Icon} {
+        visibility: visible;
     }
     cursor: pointer;
 `;
+
 const VideoImage = styled.img`
     width: 100%;
     max-height: 200px;
+    object-fit: none;
+    object-position: 50% 50%;
 `;
 
 const DetailsContainer = styled.div`
@@ -27,7 +44,7 @@ const DetailsContainer = styled.div`
     flex-direction: row;
     width: 100%;
     text-align: left;
-    font-size: 16.5px;
+    font-size: 16px;
     @media (max-width: 420px) {
         font-size: 16px;
     }
@@ -48,8 +65,13 @@ const VideoDetails = styled.div`
     width: 85%;
 `;
 
+const TitleContainer = styled.div`
+    display: flex;
+`;
+
 const VideoTitle = styled.div`
     font-weight: 500;
+    width: 95%;
     font-size: 1em;
     overflow: hidden;
     display: -webkit-box;
@@ -67,7 +89,7 @@ const ChannelName = styled.div`
 
 const VideoInfo = styled.div`
     font-size: 0.9em;
-    filter: brightness(65%);
+    filter: brightness(70%);
 `;
 const Video = (props) => {
     const {
@@ -84,7 +106,13 @@ const Video = (props) => {
             <DetailsContainer>
                 <ProfileImage src={profile_url} alt={profile_url} />
                 <VideoDetails>
-                    <VideoTitle>{title}</VideoTitle>
+                    <TitleContainer>
+                        <VideoTitle>{title}</VideoTitle>
+                        <Icon
+                            alt="three-icon"
+                            src="https://image.flaticon.com/icons/svg/483/483345.svg"
+                        />
+                    </TitleContainer>
                     <ChannelName>{channelName}</ChannelName>
                     <VideoInfo>
                         {videoViews} • {videoAge}
