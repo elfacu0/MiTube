@@ -183,7 +183,7 @@ const Header = () => {
                     </SignIn>
                 </SocialIcons>
             </HeaderWrapper>
-            <SmallHeader>
+            <SmallHeader id="small-header">
                 <YoutubeLogo
                     src="https://logos-marcas.com/wp-content/uploads/2020/04/YouTube-Logo.png"
                     alt="youtube-log"

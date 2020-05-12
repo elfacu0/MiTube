@@ -29,12 +29,12 @@ const VideoWrapper = styled.div`
     min-width: 255px;
     min-height: 150px;
     margin-right: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     @media (max-width: 420px) {
         margin-right: 0px;
-        margin-top: 25px;
         max-width: 420px;
         padding-bottom: 0px;
+        margin-bottom: 30px;
     }
     &:hover ${Icon} {
         visibility: visible;

@@ -34,7 +34,7 @@ const VideosWrapper = styled.div`
     justify-content: space-around;
     @media (max-width: 420px) {
         padding: 0px;
-        margin-top: 30px;
+        padding-top: 56px;
     }
     /* width */
     @media (min-width: 420px) {
@@ -74,8 +74,10 @@ for (let i = 0; i < 120; i++) {
     );
 }
 
+let prevScrollpos = 0;
 const VideosContainer = () => {
     const [videosShowed, setVideosShowed] = useState(20);
+
     const scrollCheck = (event) => {
         const bottom =
             event.target.scrollHeight - event.target.scrollTop ===
@@ -83,6 +85,13 @@ const VideosContainer = () => {
         if (bottom) {
             setVideosShowed(videosShowed + 8);
         }
+        let currentScrollPos = event.target.scrollTop;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById('small-header').style.top = '0';
+        } else if (currentScrollPos > 50) {
+            document.getElementById('small-header').style.top = '-80px';
+        }
+        prevScrollpos = currentScrollPos;
     };
     return (
         <VideosWrapper onScroll={scrollCheck}>
