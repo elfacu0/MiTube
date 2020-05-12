@@ -88,8 +88,10 @@ const VideosContainer = () => {
         let currentScrollPos = event.target.scrollTop;
         if (prevScrollpos > currentScrollPos) {
             document.getElementById('small-header').style.top = '0';
+            document.getElementById('small-footer').style.bottom = '0';
         } else if (currentScrollPos > 50) {
             document.getElementById('small-header').style.top = '-80px';
+            document.getElementById('small-footer').style.bottom = '-80px';
         }
         prevScrollpos = currentScrollPos;
     };

@@ -8,7 +8,7 @@ import Header from './components/Header';
 
 const Container = styled.div`
     display: flex;
-    height: 92%;
+    height: 100%;
     overflow: hidden;
 `;
 function App() {

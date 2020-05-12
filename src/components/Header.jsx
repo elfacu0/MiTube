@@ -8,12 +8,13 @@ const SmallHeader = styled.div`
     width: 100%;
     max-height: 56px;
     height: 8%;
+    top: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     background: #202020;
-    transition: top 0.3s;
+    transition: 1s;
     @media (min-width: 425px) {
         display: none;
     }

@@ -10,6 +10,7 @@ const FooterWrapper = styled.div`
     bottom: 0px;
     height: 50px;
     color: white;
+    transition: 1s;
     @media (min-width: 420px) {
         display: none;
     }
@@ -37,7 +38,7 @@ const FooterIcon = styled.img`
 
 const Footer = () => {
     return (
-        <FooterWrapper>
+        <FooterWrapper id="small-footer">
             <FooterIconContainer>
                 <FooterIcon
                     alt="home-icon"
