@@ -126,6 +126,7 @@ const SignInText = styled.p`
     margin: 0px;
 `;
 
+// Removed in newest version
 const ScreenBlur = styled.div`
     position: absolute;
     display: ${(props) => (props.show === true ? 'block' : 'none')};

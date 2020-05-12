@@ -11,7 +11,7 @@ const LeftNavCollapseWrapper = styled.div`
     overflow-y: scroll;
     background-color: #212121;
     color: white;
-    left: ${(props) => (props.show === true ? '0px' : '-30vw')};
+    left: ${(props) => (props.show === true ? '0px' : '-250px')};
     @media (max-width: 420px) {
         display: none;
     }
@@ -23,7 +23,7 @@ const LeftNavCollapseWrapper = styled.div`
 
         /* Track */
         ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #212121;
         }
 
         /* Handle */
